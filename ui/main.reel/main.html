@@ -13,6 +13,16 @@
                 "element": {"#": "main"}
             }
         },
+        "actionEventListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "addContent",
+                "handler": {"@": "rangeController"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
         "button": {
             "prototype": "digit/ui/button.reel",
             "properties": {
@@ -22,8 +32,8 @@
             },
             "listeners": [
                 {
-                    "type": "addContent",
-                    "listener": {"@": "rangeController"}
+                    "type": "action",
+                    "listener": {"@": "actionEventListener"}
                 }
             ]
         },
